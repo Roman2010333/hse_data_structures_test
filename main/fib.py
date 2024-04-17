@@ -1,6 +1,13 @@
-# Числа Фибоначчи — числовой ряд, при котором каждое последующее число равно сумме двух предыдущих
+def fibonacci(n):
+  if n == 1 or n == 2:
+    return 1
+  else:
+    return fibonacci(n-1) + fibonacci(n-2)
 
+# Get the number of terms from the user
+num_terms = int(input("Enter the number of terms: "))
 
-# Получить число Фибоначчи по его номеру
-def fib(n):
-    return 0
+# Print the Fibonacci sequence
+print("Fibonacci Sequence: ")
+for i in range(1, num_terms + 1):
+  print(fibonacci(i), end=" ")
