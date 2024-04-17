@@ -1,13 +1,17 @@
-def fibonacci(n):
-  if n == 1 or n == 2:
-    return 1
-  else:
-    return fibonacci(n-1) + fibonacci(n-2)
+def fib(n):
 
-# Get the number of terms from the user
+  if n == 0 or n == 1:
+    return n
+  memo = [0] * (n + 1)
+  memo[0] = 0
+  memo[1] = 1
+  for i in range(2, n + 1):
+    memo[i] = memo[i - 1] + memo[i - 2]
+  return memo[n]
+
 num_terms = int(input("Enter the number of terms: "))
 
-# Print the Fibonacci sequence
 print("Fibonacci Sequence: ")
-for i in range(1, num_terms + 1):
-  print(fibonacci(i), end=" ")
+for i in range(num_terms):
+  print(fib(i), end=" ")
+
