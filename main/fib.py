@@ -9,9 +9,3 @@ def fib(n):
     memo[i] = memo[i - 1] + memo[i - 2]
   return memo[n]
 
-num_terms = int(input("Enter the number of terms: "))
-
-print("Fibonacci Sequence: ")
-for i in range(num_terms):
-  print(fib(i), end=" ")
-
